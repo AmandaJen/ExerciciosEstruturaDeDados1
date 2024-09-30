@@ -4,25 +4,26 @@
 #include <conio.h>
 
 int main(){
-    char selecao[10];
-    char sair[10]="sair";
-    char pilha[10]="pilha";
-    char fila[10]="fila";
-    int selecaopl, teste;
+    int selecaopl=0;
+    char ayuda;
     printf ("Bem vindo ao programa de pilhas e filas!\n\n\n");
-    teste = strcmp(selecao,sair);
-    while(teste=!0){
-        printf ("Escreva 'pilha' ou 'fila' para organizar seus dados. Digite 'sair' para encerrar o programa\n");
-        fflush(stdin);
-        fgets(selecao, 10, stdin);
-        getchar();
+    while(selecaopl=!3){
+        printf ("Escreva 1 para pilha ou 2 para fila para organizar seus dados. \nDigite 3 sair para encerrar o programa\n");
+        scanf ("%n",&selecaopl);
+        if (selecaopl==1){
 
+        }
+        if (selecaopl==2){
 
-
-        if (teste==0){
+        } 
+        if (selecaopl==3){
             break;
         }
-        teste = strcmp(selecao,sair);
+        if (selecaopl<1 && selecaopl>3) {
+            printf ("Número digitado sem funcoes, aperte qualquer tecla para voltar ao menu inicial tente novamente");
+            scanf("%c",&ayuda);
+            system("CLS");
+        }
     }
     return 0;
 }
