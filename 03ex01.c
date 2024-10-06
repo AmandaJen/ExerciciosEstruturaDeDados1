@@ -32,7 +32,7 @@ void vazio(int tam){
 }
 
 void cheio(int tam, int tammax){
-    if (tam==tammax){
+    if (tam>tammax){
         printf ("O banco de dados esta cheio\n\n\n");
     }
     else {
@@ -41,7 +41,7 @@ void cheio(int tam, int tammax){
 }
 
 int main(){
-    int selecaopf=0, selecaop=0, selecaof=0, tampilha=1, tamfila=0, pilha[1000], fila[1000], tammaxpilha=10, tammaxfila=10, remocaop=5, remocaof=1, procura, procuraf, Verdfalso;
+    int selecaopf=0, selecaop=0, selecaof=0, tampilha=1, tamfila=1, pilha[1000], fila[1000], tammaxpilha=10, tammaxfila=10, remocaop=5, remocaof=1, procura, procuraf, Verdfalso;
     char ayuda;
     system ("CLS");
     printf ("Bem vindo ao programa de pilhas e filas!\n\n\n");
@@ -51,8 +51,8 @@ int main(){
         system ("CLS");
         if (selecaopf==1){
             while(selecaop!=6){
-                printf ("Menu de Pilhas\n\nDigite o numero para a funcao \n1-Insercao de elementos \n2-Remocao de elementos \n 3- Ver o elemento do topo");
-                printf ("\n2-Verificar se a pilha esta cheia \n5-Verificar se a pilha esta vazia \n6-Para voltar ao menu inicial\n");
+                printf ("Menu de Pilhas\n\nDigite o numero para a funcao \n1-Insercao de elementos \n2-Remocao de elementos \n3-Ver o elemento do topo");
+                printf ("\n4-Verificar se a pilha esta cheia \n5-Verificar se a pilha esta vazia \n6-Para voltar ao menu inicial\n");
                 scanf ("%i", &selecaop);
                 system ("CLS");
                 switch (selecaop) {
